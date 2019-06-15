@@ -6,4 +6,4 @@ environment:
 build_script:
 - ps: |
     nuget restore TestConsoleApp1.sln
-    msbuild TestConsoleApp1.sln -logger:packages\BCC-MSBuildLog.0.1.10-pullrequest0028-0040\tools\net472\BCCMSBuildLog.dll  /verbosity:minimal
+    msbuild TestConsoleApp1.sln -logger:packages\BCC-MSBuildLog.0.1.10-pullrequest0028-0042\tools\net472\BCCMSBuildLog.dll  /verbosity:minimal
