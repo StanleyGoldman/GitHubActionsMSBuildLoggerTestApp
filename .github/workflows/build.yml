@@ -12,7 +12,7 @@ jobs:
         dotnet-version: 3.0.100
     - name: Run dotnet
       run: |
-        dotnet build -c Release .\TestConsoleApp1.sln
+        dotnet build -c Release .\TestConsoleApp1.sln /logger:GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
   msbuild:
     runs-on: windows-latest
     steps:
@@ -21,4 +21,4 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Run msbuild
       run: |
-        msbuild.exe -verbosity:minimal TestConsoleApp1.sln
+        msbuild.exe -verbosity:minimal TestConsoleApp1.sln /logger:GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
