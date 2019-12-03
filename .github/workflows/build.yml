@@ -4,6 +4,8 @@ on: [push]
 jobs:
   dotnet:
     runs-on: windows-latest
+    env:
+      GitHubActionsLogger_Debug: True
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
@@ -15,6 +17,8 @@ jobs:
         dotnet build -c Release .\TestConsoleApp1.sln /logger:GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
   msbuild:
     runs-on: windows-latest
+    env:
+      GitHubActionsLogger_Debug: True
     steps:
     - uses: actions/checkout@v1
     - name: Setup MSBuild.exe
