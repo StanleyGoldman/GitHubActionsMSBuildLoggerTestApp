@@ -14,4 +14,5 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build and Test
       run: |
+        $env:GitHubActionsLogger_Debug = "True"
         .\build.ps1
