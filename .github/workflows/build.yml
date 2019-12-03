@@ -1,0 +1,24 @@
+name: Build
+on: [push]
+
+jobs:
+  dotnet:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Run dotnet
+      run: |
+        dotnet build -c Release .\TestConsoleApp1.sln
+  msbuild:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Run msbuild
+      run: |
+        msbuild.exe -verbosity:minimal TestConsoleApp1.sln
