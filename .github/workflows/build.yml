@@ -4,8 +4,6 @@ on: [push]
 jobs:
   dotnet:
     runs-on: windows-latest
-    env:
-      SonOfPicasso_Verbose: True
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
@@ -17,8 +15,6 @@ jobs:
         dotnet build -c Release .\TestConsoleApp1.sln
   msbuild:
     runs-on: windows-latest
-    env:
-      SonOfPicasso_Verbose: True
     steps:
     - uses: actions/checkout@v1
     - name: Setup MSBuild.exe
