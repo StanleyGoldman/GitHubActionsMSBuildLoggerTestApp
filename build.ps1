@@ -1,1 +1,1 @@
-dotnet build -c Release .\TestConsoleApp1.sln
+dotnet build -c Release .\TestConsoleApp1.sln /logger:GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
