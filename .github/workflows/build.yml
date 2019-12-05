@@ -12,9 +12,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
+    - uses: StanleyGoldman/setup-GitHubActionsMSBuildLogger@master
     - name: Run dotnet
       run: |
-        dotnet build -c Release .\TestConsoleApp1.sln /logger:GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
+        dotnet build -c Release .\TestConsoleApp1.sln /logger:../GitHubActionsLogger,.\GitHubActionsMSBuildLogger.dll
   msbuild:
     runs-on: windows-latest
     env:
