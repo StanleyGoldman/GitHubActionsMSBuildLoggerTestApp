@@ -12,6 +12,7 @@ jobs:
         dotnet-version: 3.0.100
     - name: Run dotnet
       run: |
+        nuget restore .\TestConsoleApp1.sln
         dotnet build -c Release .\TestConsoleApp1.sln
   msbuild:
     runs-on: windows-latest
@@ -21,4 +22,5 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Run msbuild
       run: |
+        nuget restore .\TestConsoleApp1.sln
         msbuild.exe -verbosity:minimal TestConsoleApp1.sln
