@@ -41,12 +41,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.Common.dll" />
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.Common.Workspaces.dll" />
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.CSharp.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.CSharp.Analyzers.dll" />
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.CSharp.dll" />
-    <Analyzer Include="..\packages\Roslynator.Analyzers.1.9.0\analyzers\dotnet\cs\Roslynator.CSharp.Workspaces.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.Common.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.Core.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.CSharp.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.CSharp.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.CSharp.Workspaces.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.Workspaces.Common.dll" />
+    <Analyzer Include="..\packages\Roslynator.Analyzers.2.2.0\analyzers\dotnet\cs\Roslynator.Workspaces.Core.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
